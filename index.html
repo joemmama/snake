@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake</title>
+    </head>
+    <body>
+        <style>body{margin:0}canvas{display:block}</style>
+        <canvas id="myCanvas"></canvas>
+        <script>
+            window.onload = function(){
+                init();
+                window.addEventListener("resize", init, false);
+            }
+            function init(){
+                var myCanvas = document.getElementById("myCanvas");
+                var ctx = myCanvas.getContext("2d");
+                var myWidth = window.innerWidth;
+                var myHeight = window.innerHeight;
+                ctx.canvas.width = myWidth;
+                ctx.canvas.height = myHeight;
+                ctx.fillStyle = "black";
+                ctx.fillRect(0,0,myWidth,myHeight);
+            }
+        </script>
+    </body>
+</html>
